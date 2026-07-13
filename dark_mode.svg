@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="985px" height="520px" font-size="15px">
+<style>
+@font-face {
+  src: local('Consolas'), local('Consolas Bold');
+  font-family: 'ConsolasFallback';
+  font-display: swap;
+  -webkit-size-adjust: 109%;
+  size-adjust: 109%;
+}
+.key { fill: #c5a880; }
+.value { fill: #f3f4f6; }
+.addColor { fill: #3fb950; }
+.delColor { fill: #f85149; }
+.cc { fill: #3a332a; }
+.title { fill: #ffffff; }
+.banner { fill: #c5a880; }
+.portrait { fill: #9ca3af; }
+text, tspan { white-space: pre; }
+</style>
+<rect width="985px" height="520px" fill="#07080a" rx="15" />
+
+
+<text x="440" y="30" class="banner" font-size="14px">
+  <tspan x="440" y="30" />
+  <tspan x="440" y="45">██████╗  █████╗ ██╗      █████╗      ██╗██╗</tspan>
+  <tspan x="440" y="60">██╔══██╗██╔══██╗██║     ██╔══██╗     ██║██║</tspan>
+  <tspan x="440" y="75">██████╔╝███████║██║     ███████║     ██║██║</tspan>
+  <tspan x="440" y="90">██╔══██╗██╔══██║██║     ██╔══██║██   ██║██║</tspan>
+  <tspan x="440" y="105">██████╔╝██║  ██║███████╗██║  ██║╚█████╔╝██║</tspan>
+  <tspan x="440" y="120">╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚════╝ ╚═╝</tspan>
+</text>
+
+
+<text x="20" y="30" class="portrait" font-size="13px">
+  <tspan x="20" y="30">                        wwwddw*                     </tspan>
+  <tspan x="20" y="47">                 hdG8#@@@@@@@@@@@@8k                </tspan>
+  <tspan x="20" y="64">               b@@@@@@@@@@@@@@@@@@@@@8o             </tspan>
+  <tspan x="20" y="81">             u@@@@@@@@@@@@@@@@@@@@@@@@@p            </tspan>
+  <tspan x="20" y="98">             p@@@@@@@@@@@@@@@@@@@@@@@@@@8           </tspan>
+  <tspan x="20" y="115">          c&amp;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@p          </tspan>
+  <tspan x="20" y="132">          8@@@@@@&amp;pdwaokdp888#@@@@@@@@@@@@t         </tspan>
+  <tspan x="20" y="149">          @@@@@@wzit!+!!!tiiujhawdG#@@@@@#!         </tspan>
+  <tspan x="20" y="166">          p@@@@Gjuic!++++=++++!tcz*ab@@@@w          </tspan>
+  <tspan x="20" y="183">          *@@@@bhziit!++===++!!tizj*a8@@8           </tspan>
+  <tspan x="20" y="200">           &amp;@@&amp;a*zic!=-;-------=!cujho#@*           </tspan>
+  <tspan x="20" y="217">           z@8***zzuictt!+==+cujhaaoohd@            </tspan>
+  <tspan x="20" y="234">           a#pzoG&amp;@@@@@#&amp;bahd#@@@@@#8dw8a           </tspan>
+  <tspan x="20" y="251">           jokzad8&amp;p##8@8bhaG888#dk8baawh           </tspan>
+  <tspan x="20" y="268">           hbazuiu*awwaooztuooaokohjzzjdh           </tspan>
+  <tspan x="20" y="285">           *oauc=-=!tcijzi+tjhjcct+=+ijwz           </tspan>
+  <tspan x="20" y="302">           takji!-:;-c*ic+,;cz*i+-;=!ihk!           </tspan>
+  <tspan x="20" y="319">            cka*ut!!ciu*kozzkdjicttcz*ku            </tspan>
+  <tspan x="20" y="336">             zdhh*jjzzjb@#G&amp;@@dahhhhaow             </tspan>
+  <tspan x="20" y="353">              dwaa*w8@@8Gbwkb&amp;#@@8aaad              </tspan>
+  <tspan x="20" y="370">               &amp;kohd8bpk*zjj*wbdbGooph              </tspan>
+  <tspan x="20" y="387">               a@&amp;bkaj*oddddbkhj*wb#k               </tspan>
+  <tspan x="20" y="404">              t!d8@8k*uiuadk*iijw8@Gt               </tspan>
+  <tspan x="20" y="421">                 hp@@&amp;w*uizuizop@8kw a              </tspan>
+  <tspan x="20" y="438">                u  op#@@#88G&amp;#@8bawa u              </tspan>
+  <tspan x="20" y="455">                 u  hwdG8###&amp;pka op- j@     *       </tspan>
+  <tspan x="20" y="472">              j   u    aowwwah  oG     @        h   </tspan>
+  <tspan x="20" y="489">                   c           abc                  </tspan>
+</text>
+
+
+<text x="440" y="140" fill="#c9d1d9">
+  <tspan x="440" y="140" class="cc">————————————————————————————————————————————————————————</tspan>
+  <tspan x="440" y="160" class="cc">. </tspan><tspan class="key">Uptime</tspan>:<tspan class="cc" id="age_data_dots"> .................... </tspan><tspan class="value" id="age_data">23 years, 9 months, 15 days</tspan>
+  <tspan x="440" y="180" class="cc">. </tspan><tspan class="key">Host</tspan>:<tspan class="cc"> ................ </tspan><tspan class="value">Chartered Accountancy Articleship</tspan>
+  <tspan x="440" y="200" class="cc">. </tspan><tspan class="key">Kernel</tspan>:<tspan class="cc"> .................................... </tspan><tspan class="value">CA Finalist</tspan>
+  <tspan x="440" y="220" class="cc">. </tspan>
+  <tspan x="440" y="240" class="cc">. </tspan><tspan class="key">Core Skills</tspan>:<tspan class="cc"> ........ </tspan><tspan class="value">Audit (Statutory &amp; Tax), Valuation</tspan>
+  <tspan x="440" y="260" class="cc">. </tspan><tspan class="key">Tech Skills</tspan>:<tspan class="cc"> .......... </tspan><tspan class="value">Python, SQL, VBA, PowerBI, KNIME</tspan>
+  <tspan x="440" y="280" class="cc">. </tspan><tspan class="key">Projects</tspan>:<tspan class="cc"> ..... </tspan><tspan class="value">AIS Decryptor, GST Downloader, 26AS Tool</tspan>
+  <tspan x="440" y="300" class="cc">. </tspan>
+  <tspan x="440" y="320" class="cc">. </tspan><tspan class="key">Email</tspan>:<tspan class="cc"> ................................. </tspan><tspan class="value">mail@balajik.in</tspan>
+  <tspan x="440" y="340" class="cc">. </tspan><tspan class="key">Website</tspan>:<tspan class="cc"> ............................ </tspan><tspan class="value">https://balajik.in</tspan>
+  <tspan x="440" y="360" class="cc">. </tspan>
+  <tspan x="440" y="380" class="title">- GitHub Stats</tspan> <tspan class="cc">-——————————————————————————————————————-—-</tspan>
+  <tspan x="440" y="400" class="cc">. </tspan><tspan class="key">Repos</tspan>:<tspan class="cc" id="repo_data_dots"> .. </tspan><tspan class="value" id="repo_data">12</tspan> {{<tspan class="key">Contributed</tspan>: <tspan class="value" id="contrib_data">12</tspan>}} | <tspan class="key">Stars</tspan>:<tspan class="cc" id="star_data_dots"> ........... </tspan><tspan class="value" id="star_data">0</tspan>
+  <tspan x="440" y="420" class="cc">. </tspan><tspan class="key">Commits</tspan>:<tspan class="cc" id="commit_data_dots"> ................... </tspan><tspan class="value" id="commit_data">0</tspan> | <tspan class="key">Followers</tspan>:<tspan class="cc" id="follower_data_dots"> ......... </tspan><tspan class="value" id="follower_data">42</tspan>
+  <tspan x="440" y="440" class="cc">. </tspan><tspan class="key">Lines of Code on GitHub</tspan>:<tspan class="cc" id="loc_data_dots"> ........ </tspan><tspan class="value" id="loc_data">0</tspan> ( <tspan class="addColor" id="loc_add">0</tspan><tspan class="addColor">++</tspan>, <tspan id="loc_del_dots"> ...... </tspan><tspan class="delColor" id="loc_del">0</tspan><tspan class="delColor">--</tspan> )
+</text>
+</svg>

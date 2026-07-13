@@ -1,0 +1,25 @@
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Reference directories (external profiles)
+Andrew6rant/
+
+# Playwright logs and states
+.playwright-cli/
+
+# Local cache files
+cache/*.txt
+!cache/requirements.txt
+
+# Temporary/testing images
+*.png
+*.png.log
