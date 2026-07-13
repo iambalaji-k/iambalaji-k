@@ -7,8 +7,8 @@ def read_file_lines(path):
         return [line.rstrip('\r\n') for line in f]
 
 def make_svg(theme):
-    name_lines = read_file_lines("D:/Vibe Coding/githubhome/balaji.txt")
-    portrait_lines = read_file_lines("D:/Vibe Coding/githubhome/my_face_ascii.txt")
+    name_lines = read_file_lines("balaji.txt")
+    portrait_lines = read_file_lines("my_face_ascii.txt")
     
     # SVG Dimensions
     width = 985
@@ -104,13 +104,13 @@ def main():
     dark_svg = make_svg('dark')
     light_svg = make_svg('light')
     
-    with open("D:/Vibe Coding/githubhome/dark_mode.svg", "w", encoding="utf-8") as f:
+    with open("dark_mode.svg", "w", encoding="utf-8") as f:
         f.write(dark_svg)
-    print("Saved D:/Vibe Coding/githubhome/dark_mode.svg")
+    print("Saved dark_mode.svg")
     
-    with open("D:/Vibe Coding/githubhome/light_mode.svg", "w", encoding="utf-8") as f:
+    with open("light_mode.svg", "w", encoding="utf-8") as f:
         f.write(light_svg)
-    print("Saved D:/Vibe Coding/githubhome/light_mode.svg")
+    print("Saved light_mode.svg")
 
 if __name__ == '__main__':
     main()

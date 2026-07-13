@@ -478,6 +478,6 @@ if __name__ == '__main__':
     print(f"Stats fetched: Commits={commit_data}, Stars={star_data}, Repos={repo_data}, Followers={follower_data}")
     
     # Overwrite template files
-    svg_overwrite('D:/Vibe Coding/githubhome/dark_mode.svg', age_data, commit_data, star_data, repo_data, contrib_data, follower_data, total_loc[:-1])
-    svg_overwrite('D:/Vibe Coding/githubhome/light_mode.svg', age_data, commit_data, star_data, repo_data, contrib_data, follower_data, total_loc[:-1])
+    svg_overwrite('dark_mode.svg', age_data, commit_data, star_data, repo_data, contrib_data, follower_data, total_loc[:-1])
+    svg_overwrite('light_mode.svg', age_data, commit_data, star_data, repo_data, contrib_data, follower_data, total_loc[:-1])
     print("SVGs successfully updated with live statistics!")
