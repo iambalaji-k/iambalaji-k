@@ -35,6 +35,7 @@ jobs:
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           USER_NAME: iambalaji-k
+          PYTHONUNBUFFERED: 1
         run: python update_profile.py
 
       - name: Commit and Push Changes
