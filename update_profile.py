@@ -71,7 +71,7 @@ def simple_request(func_name, query, variables):
                 }}
         return MockResponse()
         
-    request = requests.post('https://api.github.com/graphql', json={'query': query, 'variables':variables}, headers=HEADERS)
+    request = requests.post('https://api.github.com/graphql', json={'query': query, 'variables':variables}, headers=HEADERS, timeout=15)
     if request.status_code == 200:
         return request
     raise Exception(f"{func_name} failed with status {request.status_code}: {request.text}")
@@ -161,7 +161,7 @@ def recursive_loc(owner, repo_name, data, cache_comment, addition_total=0, delet
                             }
                             pageInfo {
                                 endCursor
-                                hasNextPage
+                                html_url: hasNextPage
                             }
                         }
                     }
@@ -169,21 +169,32 @@ def recursive_loc(owner, repo_name, data, cache_comment, addition_total=0, delet
             }
         }
     }'''
+    # Note: we renamed hasNextPage to html_url in the mock-friendly field query if needed,
+    # but let's keep the exact field name matching what it was. Let's keep hasNextPage:
+    query = query.replace('html_url: hasNextPage', 'hasNextPage')
+    
     variables = {'repo_name': repo_name, 'owner': owner, 'cursor': cursor}
     if not ACCESS_TOKEN:
         return 100, 10, 5  # Mock values
         
-    request = requests.post('https://api.github.com/graphql', json={'query': query, 'variables':variables}, headers=HEADERS)
+    if cursor is None:
+        print(f"  -> Counting LOC for {owner}/{repo_name}...")
+        
+    request = requests.post('https://api.github.com/graphql', json={'query': query, 'variables':variables}, headers=HEADERS, timeout=15)
     if request.status_code == 200:
         repo_data = request.json().get('data', {}).get('repository', {})
         if repo_data and repo_data.get('defaultBranchRef'):
             history = repo_data['defaultBranchRef']['target']['history']
+            total_commits = history['totalCount']
             for node in history['edges']:
                 author_user = node['node']['author']['user']
                 if author_user and author_user.get('id') == OWNER_ID:
                     my_commits += 1
                     addition_total += node['node']['additions']
                     deletion_total += node['node']['deletions']
+            
+            print(f"     Processed {my_commits} of your commits in {owner}/{repo_name} (total repo commits: {total_commits})...")
+            
             if not history['pageInfo']['hasNextPage'] or history['edges'] == []:
                 return addition_total, deletion_total, my_commits
             else:
@@ -277,11 +288,13 @@ def cache_builder(edges, comment_size, force_cache, loc_add=0, loc_del=0):
                 db_ref = node_repo.get('defaultBranchRef')
                 if db_ref:
                     actual_commit_count = db_ref['target']['history']['totalCount']
+                    print(f"[{index+1}/{len(edges)}] Checking {name_w_owner} (cached: {commit_count} commits, remote: {actual_commit_count} commits)")
                     if int(commit_count) != actual_commit_count:
                         owner, repo_name = name_w_owner.split('/')
                         loc = recursive_loc(owner, repo_name, data, cache_comment)
                         data[index] = f"{repo_hash} {actual_commit_count} {loc[2]} {loc[0]} {loc[1]}\n"
                 else:
+                    print(f"[{index+1}/{len(edges)}] Checking {name_w_owner} (no default branch, skipping)")
                     data[index] = f"{repo_hash} 0 0 0 0\n"
             except Exception as e:
                 print(f"Error checking cache for {name_w_owner}: {e}")
