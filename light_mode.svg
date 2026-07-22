@@ -66,7 +66,7 @@ text, tspan { white-space: pre; }
 
 <text x="440" y="140" fill="#c9d1d9">
   <tspan x="440" y="140" class="cc">————————————————————————————————————————————————————————</tspan>
-  <tspan x="440" y="160" class="cc">. </tspan><tspan class="key">Uptime</tspan>:<tspan class="cc" id="age_data_dots"> .................... </tspan><tspan class="value" id="age_data">23 years, 9 months, 23 days</tspan>
+  <tspan x="440" y="160" class="cc">. </tspan><tspan class="key">Uptime</tspan>:<tspan class="cc" id="age_data_dots"> .................... </tspan><tspan class="value" id="age_data">23 years, 9 months, 24 days</tspan>
   <tspan x="440" y="180" class="cc">. </tspan><tspan class="key">Host</tspan>:<tspan class="cc"> ................ </tspan><tspan class="value">Chartered Accountancy Articleship</tspan>
   <tspan x="440" y="200" class="cc">. </tspan><tspan class="key">Kernel</tspan>:<tspan class="cc"> .................................... </tspan><tspan class="value">CA Finalist</tspan>
   <tspan x="440" y="220" class="cc">. </tspan>
